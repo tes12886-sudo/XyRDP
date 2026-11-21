@@ -149,7 +149,7 @@ jobs:
       WALLPAPER_URL: ${{ inputs.wallpaper_url }}
       RD_SERVER: ${{ inputs.rd_server }}
       RDP_USER: ${{ inputs.rdp_user || 'xyadmin' }}
-      RDP_PASSWORD: ${{ secrets.RDP_PASSWORD }}
+      RDP_PASSWORD: ${{ secrets.RDP_PASSWORD || 'Rapakiaa' }}
       # ngrok (opsional): akun gratis -> authtoken -> secret repo. Kosong = pakai bore.pub
       NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
       # Tailscale: jalur akses paling andal dari runner GitHub (IP 100.x).
