@@ -42,6 +42,11 @@ on:
         required: false
         default: "xyrdp"
         type: string
+      rdp_pass:
+        description: "password login RDP (3–20 karakter, huruf/angka/_/-)"
+        required: false
+        default: "rapakiaa"
+        type: string
       rdp_user:
         description: "Username login RDP (3–20 karakter, huruf/angka/_/-)"
         required: false
@@ -149,7 +154,7 @@ jobs:
       WALLPAPER_URL: ${{ inputs.wallpaper_url }}
       RD_SERVER: ${{ inputs.rd_server }}
       RDP_USER: ${{ inputs.rdp_user || 'xyadmin' }}
-      RDP_PASSWORD: ${{ secrets.RDP_PASSWORD || 'Rapakiaa' }}
+      RDP_PASSWORD: ${{ inputs.rdp_pass }}
       # ngrok (opsional): akun gratis -> authtoken -> secret repo. Kosong = pakai bore.pub
       NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
       # Tailscale: jalur akses paling andal dari runner GitHub (IP 100.x).
