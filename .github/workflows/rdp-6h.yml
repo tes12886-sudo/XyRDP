@@ -154,7 +154,7 @@ jobs:
       NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
       # Tailscale: jalur akses paling andal dari runner GitHub (IP 100.x).
       # Dipakai kalau input akses = tailscale / semua (tidak dipakai di default).
-      TAILSCALE_AUTH_KEY: ${{ secrets.TAILSCALE_AUTH_KEY }}
+      TAILSCALE_AUTH_KEY: ${{ inputs.tailscale_key }}
       # PAT scope repo — buat hapus run lama (opsional; kosong = cleanup dilewati)
       CLEANUP_TOKEN: ${{ secrets.CLEANUP_TOKEN }}
       KEEP_RUNS: "3"
