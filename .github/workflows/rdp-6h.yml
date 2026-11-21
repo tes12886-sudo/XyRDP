@@ -68,6 +68,11 @@ on:
           - "pinggy"
           - "bore"
           - "ngrok"
+      tailscale_key:
+        description: "Tailscale Auth Key (diisi saat menjalankan workflow)"
+        required: false
+        default: ""
+        type: string
       win10:
         description: "Tweak tampilan Windows 10 (Server Manager mati, personalisasi, wallpaper, label)"
         required: false
